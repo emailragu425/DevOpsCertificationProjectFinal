@@ -58,21 +58,41 @@
       </plugin>
      </plugins>
    </build>
-<reporting>
-	<plugins>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-pmd-plugin</artifactId>
-			<configuration>
-				<rulesets>
-					<ruleset>/rulesets/braces.xml</ruleset>
-					<ruleset>/rulesets/naming.xml</ruleset>
-					<ruleset>/rulesets/strings.xml</ruleset>
-					<ruleset>http://localhost/design.xml</ruleset>
-				</rulesets>
-			</configuration>
-		</plugin>
-	</plugins>
-</reporting>	
+<distributionManagement>
+    <!-- start -location where site is deployed -->
+    <site>
+      <id>site.deployments</id>
+      <name>Site deployments</name>
+      <url>dav:localhost/${basedir}</url>
+    </site>
+  </distributionManagement>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+	 <configuration>
+             <linkXref>true</linkXref>
+                   <sourceEncoding>utf-8</sourceEncoding>
+                         <minimumTokens>1</minimumTokens>
+                             <targetJdk>1.8</targetJdk>
+		                <skipEmptyReport>false</skipEmptyReport>
+         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jxr-plugin</artifactId>
+        <version>2.5</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.10.1</version>
+      </plugin>
+	  </plugins>
+	</reporting>
+	
+	
+	
 	
 </project>
