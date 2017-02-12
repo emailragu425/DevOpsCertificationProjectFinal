@@ -17,7 +17,11 @@
             <version>1.9.3</version>
             <type>jar</type>
     </dependency>
-    <dependency>
+   <dependency>
+    <groupId>pmd</groupId>
+    <artifactId>pmd</artifactId>
+    <version>3.2</version>
+</dependency><dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
