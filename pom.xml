@@ -56,9 +56,7 @@
           <warSourceDirectory>WebContent</warSourceDirectory>
         </configuration>
       </plugin>
-    
-    
-   </plugins>
+     </plugins>
    </build>
 <reporting>
 	<plugins>
