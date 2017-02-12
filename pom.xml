@@ -61,11 +61,20 @@
    </plugins>
    </build>
 <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-pmd-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </reporting>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-pmd-plugin</artifactId>
+			<configuration>
+				<rulesets>
+					<ruleset>/rulesets/braces.xml</ruleset>
+					<ruleset>/rulesets/naming.xml</ruleset>
+					<ruleset>/rulesets/strings.xml</ruleset>
+					<ruleset>http://localhost/design.xml</ruleset>
+				</rulesets>
+			</configuration>
+		</plugin>
+	</plugins>
+</reporting>	
+	
 </project>
