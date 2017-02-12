@@ -58,14 +58,15 @@
      </plugins>
    </build>
 <distributionManagement>
-    <!-- start -location where site is deployed -->
-    <site>
-      <id>site.deployments</id>
-      <name>Site deployments</name>
-      <url>dav:localhost/${basedir}</url>
-    </site>
-  </distributionManagement>
-  <reporting>
+		<!-- start - location where site is deployed - username/password for site.deployments in server.xml -->
+		<site>
+			<id>site.deployments</id>
+			<name>Site deployments</name>
+			<url>dav:http://127.0.0.1/sites/${artifactId}/</url>
+		</site>
+		<!-- end - location where site is deployed - username/password for site.deployments in server.xml -->
+	</distributionManagement>
+<reporting>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
