@@ -17,13 +17,7 @@
             <version>1.9.3</version>
             <type>jar</type>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/pmd/pmd -->
-<dependency>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-pmd-plugin</artifactId>
-  <version>3.2</version>
-  <type>maven-plugin</type>
-</dependency>
+   
  <dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -63,20 +57,15 @@
         </configuration>
       </plugin>
     
-    <plugin>
-                        <artifactId>maven-pmd-plugin</artifactId>
-                        <version>3.2</version>
-                        <configuration>
-                            <targetJdk>1.8</targetJdk>
-                            <aggregate>true</aggregate>
-                            <format>xml</format>
-                            <!-- CPD options -->
-                            <minimumTokens>20</minimumTokens>
-                            <!--<ignoreIdentifiers>true</ignoreIdentifiers>-->
-                            <failOnViolation>true</failOnViolation>
-                            <failurePriority>2</failurePriority>
-                        </configuration>
-      </plugin>
+    
    </plugins>
    </build>
+<reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </reporting>
 </project>
