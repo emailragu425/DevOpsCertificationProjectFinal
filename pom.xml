@@ -4,6 +4,12 @@
   <artifactId>DevopsBank</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>compile</scope>
+    </dependency>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <resources>
@@ -14,13 +20,7 @@
         </excludes>
       </resource>
     </resources>
-    <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.0.1</version>
-            <scope>compile</scope>
-        </dependency>
-    <plugins>
+   <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.0</version>
@@ -37,5 +37,5 @@
         </configuration>
       </plugin>
     </plugins>
-  </build>
+   </build>
 </project>
