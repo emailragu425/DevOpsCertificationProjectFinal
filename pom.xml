@@ -50,7 +50,7 @@
       </plugin>
       
 	<plugin>
-        <groupid>org.codehaus.mojo</groupid>
+        <groupId>org.codehaus.mojo</groupId>
         <artifactId>cobertura-maven-plugin</artifactId>
 	<version>${cobertura.version}</version>
         <configuration>
